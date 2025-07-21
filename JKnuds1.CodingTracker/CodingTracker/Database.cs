@@ -74,7 +74,6 @@ namespace CodingTracker
             {
                 SQLiteConnection.CreateFile(dbPath);
             }
-            //string connectionString = $"data source={dbPath};version = 3;";
             using (var connection = new SQLiteConnection(Program.connectionString))
             {
                 connection.Open();

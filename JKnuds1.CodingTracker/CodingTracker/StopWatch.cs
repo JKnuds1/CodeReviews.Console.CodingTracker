@@ -6,21 +6,21 @@ namespace CodingTracker
         private static DateTime startTime;
         private static TimeSpan timespent;
         private static bool runWatch;
-        private static void start()
+        private static void Start()
         {
             startTime = DateTime.Now;
         }
-        private static void tick()
+        private static void Tick()
         {
             timespent = DateTime.Now - startTime;
         }
         internal static void Timer()
         {
             runWatch = true;
-            start();
+            Start();
             while (runWatch)
             {
-                tick();
+                Tick();
                 Console.Clear();
                 Console.WriteLine(timespent);
                 if (Console.KeyAvailable)
